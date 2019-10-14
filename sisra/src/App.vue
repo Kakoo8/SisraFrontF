@@ -1,52 +1,56 @@
 <template>
   <v-app>
-  <nav class="navbar" role="navigation" aria-label="main navigation">
-  <div class="navbar-brand">
-    <a class="navbar-item" >
-      <img src="https://www.usach.cl/sites/default/files/logo_usach.jpg" width="112" height="28">
-    </a>
-
-
-  </div>
-
-  <div id="navbarBasicExample" class="navbar-menu">
-    <div class="navbar-start">
-      <a class="navbar-item">
-        
-      </a>
-
-      <a class="navbar-item">
-        
-      </a>
-
-     
-
-        
-          <a class="navbar-item">
-            Nombre Alumno:
-          </a>
-          <a class="navbar-item">
-            Carrera:
-          </a>
-          <a class="navbar-item">
+  <section class="section" heigth="30px">
+    
+    <div class="container">
+      <h1 class="title">
+      <nav class="level">
+          <p class="level-item has-text-centered">
+            <img src="https://www.usach.cl/sites/default/files/logo_usach.jpg" width="200" height="auto">
+          </p>
+          <p class="level-item has-text-centered">
             
-          </a>
-          <hr class="navbar-divider">
-
-        
+          </p>
+          <p class="level-item has-text-centered">
+            
+          </p>
+          <p class="level-item has-text-centered">
+            
+          </p>
+          <p class="level-item has-text-centered">
+           
+            
+          </p>
+        </nav>
       
+      </h1>
+      <h2 class="subtitle">
+       <nav class="level">
+          <p class="level-item has-text-centered">
+            Nombre Alumno:
+          </p>
+          <p class="level-item has-text-centered">
+            Carrera: 
+          </p>
+          <p class="level-item has-text-centered">
+            
+          </p>
+          <p class="level-item has-text-centered">
+            
+          </p>
+          <p class="level-item has-text-centered">
+           <input class="input is-warning" type="text" placeholder="Ingrese Rut">
+            
+          </p>
+        </nav>
+      </h2>
     </div>
-
-    <div class="navbar-end">
-      <div class="navbar-item">
-        <input class="input is-warning" type="text" placeholder="Ingrese Rut">
+  </section>
+  
+       
       
-      </div>
-    </div>
-  </div>
-</nav>
-    <body>
-  <section class="section">
+   <body>   
+  
     <div class="container">
       <div class="columns">
         <div class="column is-four-fifths">
@@ -62,11 +66,16 @@
         </div>
       </div>
     </div>
-  </section>
+  
 </body>
   </v-app>
 </template>
 
+<style>
+.section {
+    padding: 1rem 1.1rem;
+}
+</style>
 <script>
 import HelloWorld from './components/HelloWorld';
 import Codigo from './components/CodigoColor';
