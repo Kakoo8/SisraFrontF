@@ -4,120 +4,118 @@
   
               <div class="column">
                 NIVEL 1
-                <div  v-for ="asignatura in asignaturas" v-bind:key="asignatura">
-                  {{asignatura.asi_cod}}
-                  ______________________
-                  <br>
-                  {{asignatura.asi_nom}}
-                  <br>
-                 </div>
-
-              </div>
-              <div class="column">
-                <div  v-for ="asignatura in asignaturas" v-bind:key="asignatura">
+                ____________
+                <div  v-for ="asignatura in nivel1" v-bind:key="asignatura">
                  
-                </div>
-
-              </div>
-              <div class="column">
-                <div class="card" v-for ="asignatura in asignaturas" v-bind:key="asignatura">
                   {{asignatura.asi_nom}}
-                  <br>
-                </div>
-
-              </div>
-              <div class="column">
-                <div class="card" v-for ="asignatura in asignaturas" v-bind:key="asignatura">
-                  {{asignatura.asi_nom}}
-                  <br>
-                </div>
-
-              </div>
-              <div class="column">
-                <div class="card" v-for ="asignatura in asignaturas" v-bind:key="asignatura">
-                  {{asignatura.asi_nom}}
+                  ____________
                   <br>
                  </div>
 
               </div>
               <div class="column">
-                <div class="card" v-for ="asignatura in asignaturas" v-bind:key="asignatura">
+                NIVEL 2
+                ____________
+                <div  v-for ="asignatura in nivel2" v-bind:key="asignatura">
+                 {{asignatura.asi_nom}}
+                 ____________
+                </div>
+
+              </div>
+              <div class="column">
+                NIVEL3
+                ____________
+                <div  v-for ="asignatura in nivel3" v-bind:key="asignatura">
                   {{asignatura.asi_nom}}
+                  ____________
                   <br>
                 </div>
 
               </div>
               <div class="column">
-                <div class="card" v-for ="asignatura in asignaturas" v-bind:key="asignatura">
+              NIVEL 4
+              ____________
+                <div  v-for ="asignatura in nivel4" v-bind:key="asignatura">
                   {{asignatura.asi_nom}}
+                  ____________
                   <br>
                 </div>
 
               </div>
               <div class="column">
-                <div class="card" v-for ="asignatura in asignaturas" v-bind:key="asignatura">
+              NIVEL 5
+              ____________
+                <div  v-for ="asignatura in nivel5" v-bind:key="asignatura">
                   {{asignatura.asi_nom}}
-                  <br>
-                </div>
-
-              </div>
-              <div class="column">
-                <div class="card" v-for ="asignatura in asignaturas" v-bind:key="asignatura">
-                  {{asignatura.asi_nom}}
+                  ____________
                   <br>
                  </div>
 
               </div>
               <div class="column">
-                <div class="card" v-for ="asignatura in asignaturas" v-bind:key="asignatura">
+              NIVEL 6<br>
+
+              ____________
+                <div  v-for ="asignatura in nivel6" v-bind:key="asignatura">
                   {{asignatura.asi_nom}}
+                  ____________
                   <br>
                 </div>
 
               </div>
               <div class="column">
-                <div class="card" v-for ="asignatura in asignaturas" v-bind:key="asignatura">
+              NIVEL 7
+              ____________
+                <div  v-for ="asignatura in nivel7" v-bind:key="asignatura">
                   {{asignatura.asi_nom}}
+                  ____________
                   <br>
                 </div>
 
               </div>
               <div class="column">
-                <div class="card" v-for ="asignatura in asignaturas" v-bind:key="asignatura">
+              NIVEL 8
+              ____________
+                <div  v-for ="asignatura in nivel8" v-bind:key="asignatura">
                   {{asignatura.asi_nom}}
+                  ____________
                   <br>
                 </div>
 
               </div>
               <div class="column">
-                <div class="card" v-for ="asignatura in asignaturas" v-bind:key="asignatura">
+                <div  v-for ="asignatura in nivel9" v-bind:key="asignatura">
                   {{asignatura.asi_nom}}
+                  ____________
                   <br>
                  </div>
 
               </div>
               <div class="column">
-                <div class="card" v-for ="asignatura in asignaturas" v-bind:key="asignatura">
+                <div  v-for ="asignatura in nivel10" v-bind:key="asignatura">
                   {{asignatura.asi_nom}}
+                  ____________
                   <br>
                 </div>
 
               </div>
               <div class="column">
-                <div class="card" v-for ="asignatura in asignaturas" v-bind:key="asignatura">
+                <div  v-for ="asignatura in nivel11" v-bind:key="asignatura">
                   {{asignatura.asi_nom}}
+                  ____________
                   <br>
                 </div>
 
               </div>
               <div class="column">
-                <div class="card" v-for ="asignatura in asignaturas" v-bind:key="asignatura">
-
+                <div  v-for ="asignatura in nivel12" v-bind:key="asignatura">
                   {{asignatura.asi_nom}}
+                  ____________
                   <br>
                 </div>
 
-              </div>                                          
+              </div>
+                                              
 
   </div>
 </div>                    
@@ -143,14 +141,12 @@ table, th, td {
   
 }
 
-#malla{
-  display:flex;
-  flex-direction: row;
-}
+
 .column{
   display: flex;
   flex-direction: column;
   align-items:center;
+  max-height: 100%;
 }
 </style>
 
@@ -164,9 +160,247 @@ export default {
   
 data () {
   return{
-  "asignaturas":
-    [
-      {"asi_cod":13273,
+  
+nivel1:[
+       
+      {"asi_cod":10126,
+       "asi_nom":"MÉTODOS DE ESTUDIO",
+       "asi_teo":4,
+       "asi_ejer":2,
+       "asi_lab":0,
+       "asi_tipo":"P",
+       "asi_creg":1,
+       "asi_elect":"N",
+       "asi_vig":"S",
+       "asi_cod_inge":"10126",
+       "asi_titulo":"N",
+       "asi_sct":0
+      },
+      {"asi_cod":10125,
+       "asi_nom":"INTRODUCCIÓN A LA INGENIERÍA",
+       "asi_teo":4,
+       "asi_ejer":2,
+       "asi_lab":0,
+       "asi_tipo":"P",
+       "asi_creg":1,
+       "asi_elect":"N",
+       "asi_vig":"S",
+       "asi_cod_inge":"10125",
+       "asi_titulo":"N",
+       "asi_sct":0
+      },
+      {"asi_cod":10104,
+       "asi_nom":"TALLER DE DESARROLLO PERSONAL E INTEGRAL",
+       "asi_teo":4,
+       "asi_ejer":2,
+       "asi_lab":0,
+       "asi_tipo":"P",
+       "asi_creg":1,
+       "asi_elect":"N",
+       "asi_vig":"S",
+       "asi_cod_inge":"10104",
+       "asi_titulo":"N",
+       "asi_sct":0
+      },
+      {"asi_cod":10102,
+       "asi_nom":"ALGEBRA I PARA INGENIERÍA",
+       "asi_teo":4,
+       "asi_ejer":2,
+       "asi_lab":0,
+       "asi_tipo":"P",
+       "asi_creg":1,
+       "asi_elect":"N",
+       "asi_vig":"S",
+       "asi_cod_inge":"10102",
+       "asi_titulo":"N",
+       "asi_sct":0
+      },
+      {"asi_cod":10101,
+       "asi_nom":"CALCULO I PARA INGENIERÍA",
+       "asi_teo":4,
+       "asi_ejer":2,
+       "asi_lab":0,
+       "asi_tipo":"P",
+       "asi_creg":1,
+       "asi_elect":"N",
+       "asi_vig":"S",
+       "asi_cod_inge":"10101",
+       "asi_titulo":"N",
+       "asi_sct":0
+      },
+
+      {"asi_cod":10103,
+       "asi_nom":"FÍSICA I PARA INGENIERÍA",
+       "asi_teo":4,
+       "asi_ejer":2,
+       "asi_lab":0,
+       "asi_tipo":"P",
+       "asi_creg":1,
+       "asi_elect":"N",
+       "asi_vig":"S",
+       "asi_cod_inge":"10108",
+       "asi_titulo":"N",
+       "asi_sct":0
+      }],
+nivel2:[ {"asi_cod":13201,
+       "asi_nom":"MÉTODOS DE PROGRAMACIÓN",
+       "asi_teo":4,
+       "asi_ejer":2,
+       "asi_lab":0,
+       "asi_tipo":"P",
+       "asi_creg":1,
+       "asi_elect":"N",
+       "asi_vig":"S",
+       "asi_cod_inge":"13201",
+       "asi_titulo":"N",
+       "asi_sct":0
+      },
+      {"asi_cod":10130,
+       "asi_nom":"INGLÉS I",
+       "asi_teo":4,
+       "asi_ejer":2,
+       "asi_lab":0,
+       "asi_tipo":"P",
+       "asi_creg":1,
+       "asi_elect":"N",
+       "asi_vig":"S",
+       "asi_cod_inge":"10130",
+       "asi_titulo":"N",
+       "asi_sct":0
+      },
+      {"asi_cod":10108,
+       "asi_nom":"ALGEBRA II PARA INGENIERÍA",
+       "asi_teo":4,
+       "asi_ejer":2,
+       "asi_lab":0,
+       "asi_tipo":"P",
+       "asi_creg":1,
+       "asi_elect":"N",
+       "asi_vig":"S",
+       "asi_cod_inge":"10108",
+       "asi_titulo":"N",
+       "asi_sct":0
+      },
+            {"asi_cod":10110,
+       "asi_nom":"FUNDAMENTOS DE COMPUTACIÓN Y PROGRAMACION",
+       "asi_teo":4,
+       "asi_ejer":2,
+       "asi_lab":0,
+       "asi_tipo":"P",
+       "asi_creg":1,
+       "asi_elect":"N",
+       "asi_vig":"S",
+       "asi_cod_inge":"10110",
+       "asi_titulo":"N",
+       "asi_sct":0
+      },
+      {"asi_cod":10109,
+       "asi_nom":"FÍSICA II PARA INGENIERÍA",
+       "asi_teo":4,
+       "asi_ejer":2,
+       "asi_lab":0,
+       "asi_tipo":"P",
+       "asi_creg":1,
+       "asi_elect":"N",
+       "asi_vig":"S",
+       "asi_cod_inge":"10109",
+       "asi_titulo":"N",
+       "asi_sct":0
+      },
+      {"asi_cod":10107,
+       "asi_nom":"CALCULO II PARA INGENIERÍA",
+       "asi_teo":4,
+       "asi_ejer":2,
+       "asi_lab":0,
+       "asi_tipo":"P",
+       "asi_creg":1,
+       "asi_elect":"N",
+       "asi_vig":"S",
+       "asi_cod_inge":"10107",
+       "asi_titulo":"N",
+       "asi_sct":0
+      },
+      {"asi_cod":10111,
+       "asi_nom":"QUÍMICA GENERAL",
+       "asi_teo":4,
+       "asi_ejer":2,
+       "asi_lab":0,
+       "asi_tipo":"P",
+       "asi_creg":1,
+       "asi_elect":"N",
+       "asi_vig":"S",
+       "asi_cod_inge":"10111",
+       "asi_titulo":"N",
+       "asi_sct":0
+      },
+     ],
+nivel3:[ {"asi_cod":13252,
+       "asi_nom":"INGENIERÍA DE SISTEMAS",
+       "asi_teo":4,
+       "asi_ejer":2,
+       "asi_lab":0,
+       "asi_tipo":"P",
+       "asi_creg":1,
+       "asi_elect":"N",
+       "asi_vig":"S",
+       "asi_cod_inge":"13252",
+       "asi_titulo":"N",
+       "asi_sct":0
+      },
+      {"asi_cod":13205,
+       "asi_nom":"ANÁLISIS DE ALGORITMOS Y ESTRUCTURA DE DATOS",
+       "asi_teo":4,
+       "asi_ejer":2,
+       "asi_lab":0,
+       "asi_tipo":"P",
+       "asi_creg":1,
+       "asi_elect":"N",
+       "asi_vig":"S",
+       "asi_cod_inge":"13205",
+       "asi_titulo":"N",
+       "asi_sct":0
+      },
+      {"asi_cod":13204,
+       "asi_nom":"PARADIGMAS DE PROGRAMACIÓN",
+       "asi_teo":4,
+       "asi_ejer":2,
+       "asi_lab":0,
+       "asi_tipo":"P",
+       "asi_creg":1,
+       "asi_elect":"N",
+       "asi_vig":"S",
+       "asi_cod_inge":"13204",
+       "asi_titulo":"N",
+       "asi_sct":0
+      },
+      {"asi_cod":10131,
+       "asi_nom":"INGLÉS II",
+       "asi_teo":4,
+       "asi_ejer":2,
+       "asi_lab":0,
+       "asi_tipo":"P",
+       "asi_creg":1,
+       "asi_elect":"N",
+       "asi_vig":"S",
+       "asi_cod_inge":"10131",
+       "asi_titulo":"N",
+       "asi_sct":0
+      },
+      {"asi_cod":10116,
+       "asi_nom":"FUNDAMENTOS DE ECONOMÍA",
+       "asi_teo":4,
+       "asi_ejer":2,
+       "asi_lab":0,
+       "asi_tipo":"P",
+       "asi_creg":1,
+       "asi_elect":"N",
+       "asi_vig":"S",
+       "asi_cod_inge":"10116",
+       "asi_titulo":"N",
+       "asi_sct":0
+      }],
+
+nivel4:[{"asi_cod":13273,
        "asi_nom":"ESTRUCTURA DE COMPUTADORES",
        "asi_teo":4,
        "asi_ejer":0,
@@ -178,9 +412,8 @@ data () {
        "asi_cod_inge":"13273",
        "asi_titulo":"N",
        "asi_sct":0
-      },
-      {"asi_cod":13277,
-       "asi_nom":"TRABAJO DE TITULACIÓN",
+      }, {"asi_cod":10128,
+       "asi_nom":"COMUNICACIÓN EFECTIVA",
        "asi_teo":4,
        "asi_ejer":2,
        "asi_lab":0,
@@ -188,11 +421,219 @@ data () {
        "asi_creg":1,
        "asi_elect":"N",
        "asi_vig":"S",
-       "asi_cod_inge":"13277",
+       "asi_cod_inge":"10128",
        "asi_titulo":"N",
        "asi_sct":0
       },
-      {"asi_cod":13276,
+      {"asi_cod":10127,
+       "asi_nom":"ELECTRICIDAD Y MAGNETISMO PARA INGENIERÍA",
+       "asi_teo":4,
+       "asi_ejer":2,
+       "asi_lab":0,
+       "asi_tipo":"P",
+       "asi_creg":1,
+       "asi_elect":"N",
+       "asi_vig":"S",
+       "asi_cod_inge":"10127",
+       "asi_titulo":"N",
+       "asi_sct":0
+      },
+      {"asi_cod":10123,
+       "asi_nom":"ECUACIONES DIFERENCIALES Y MÉTODOS NUMÉRICOS PARA INGENIERÍA",
+       "asi_teo":4,
+       "asi_ejer":2,
+       "asi_lab":0,
+       "asi_tipo":"P",
+       "asi_creg":1,
+       "asi_elect":"N",
+       "asi_vig":"S",
+       "asi_cod_inge":"10123",
+       "asi_titulo":"N",
+       "asi_sct":0
+      },
+      {"asi_cod":10115,
+       "asi_nom":"ANÁLISIS ESTADÍSTICO PARA INGENIERÍA",
+       "asi_teo":4,
+       "asi_ejer":2,
+       "asi_lab":0,
+       "asi_tipo":"P",
+       "asi_creg":1,
+       "asi_elect":"N",
+       "asi_vig":"S",
+       "asi_cod_inge":"10115",
+       "asi_titulo":"N",
+       "asi_sct":0
+      }],
+nivel5:[{"asi_cod":13275,
+       "asi_nom":"ORGANIZACIÓN DE COMPUTADORES",
+       "asi_teo":4,
+       "asi_ejer":2,
+       "asi_lab":0,
+       "asi_tipo":"P",
+       "asi_creg":1,
+       "asi_elect":"N",
+       "asi_vig":"S",
+       "asi_cod_inge":"13275",
+       "asi_titulo":"N",
+       "asi_sct":0
+      },
+      {"asi_cod":13274,
+       "asi_nom":"DISEÑO DE BASE DE DATOS",
+       "asi_teo":4,
+       "asi_ejer":2,
+       "asi_lab":0,
+       "asi_tipo":"P",
+       "asi_creg":1,
+       "asi_elect":"N",
+       "asi_vig":"S",
+       "asi_cod_inge":"13274",
+       "asi_titulo":"N",
+       "asi_sct":0
+      },
+      {"asi_cod":13261,
+       "asi_nom":"SISTEMAS DE INFORMACIÓN",
+       "asi_teo":4,
+       "asi_ejer":2,
+       "asi_lab":0,
+       "asi_tipo":"P",
+       "asi_creg":1,
+       "asi_elect":"N",
+       "asi_vig":"S",
+       "asi_cod_inge":"13261",
+       "asi_titulo":"N",
+       "asi_sct":0
+      },
+      {"asi_cod":10128,
+       "asi_nom":"INFORMÁTICA Y SOCIEDAD",
+       "asi_teo":4,
+       "asi_ejer":2,
+       "asi_lab":0,
+       "asi_tipo":"P",
+       "asi_creg":1,
+       "asi_elect":"N",
+       "asi_vig":"S",
+       "asi_cod_inge":"10128",
+       "asi_titulo":"N",
+       "asi_sct":0
+      },
+      {"asi_cod":10128,
+       "asi_nom":"EVALUACIÓN Y GESTIÓN DE PROYECTOS",
+       "asi_teo":4,
+       "asi_ejer":2,
+       "asi_lab":0,
+       "asi_tipo":"P",
+       "asi_creg":1,
+       "asi_elect":"N",
+       "asi_vig":"S",
+       "asi_cod_inge":"10128",
+       "asi_titulo":"N",
+       "asi_sct":0
+      },
+      {"asi_cod":13209,
+       "asi_nom":"FUNDAMENTOS DE INGENIERÍA DE SOFTWARE",
+       "asi_teo":4,
+       "asi_ejer":2,
+       "asi_lab":0,
+       "asi_tipo":"P",
+       "asi_creg":1,
+       "asi_elect":"N",
+       "asi_vig":"S",
+       "asi_cod_inge":"13209",
+       "asi_titulo":"N",
+       "asi_sct":0
+      },
+      {"asi_cod":10132,
+       "asi_nom":"INGLÉS III",
+       "asi_teo":4,
+       "asi_ejer":2,
+       "asi_lab":0,
+       "asi_tipo":"P",
+       "asi_creg":1,
+       "asi_elect":"N",
+       "asi_vig":"S",
+       "asi_cod_inge":"10132",
+       "asi_titulo":"N",
+       "asi_sct":0
+      }],
+nivel6:[ {"asi_cod":13266,
+       "asi_nom":"REDES COMPUTACIONALES",
+       "asi_teo":4,
+       "asi_ejer":2,
+       "asi_lab":0,
+       "asi_tipo":"P",
+       "asi_creg":1,
+       "asi_elect":"N",
+       "asi_vig":"S",
+       "asi_cod_inge":"13266",
+       "asi_titulo":"N",
+       "asi_sct":0
+      },
+      {"asi_cod":13265,
+       "asi_nom":"TÉCNICAS DE INGENIERÍA DE SOFTWARE",
+       "asi_teo":4,
+       "asi_ejer":2,
+       "asi_lab":0,
+       "asi_tipo":"P",
+       "asi_creg":1,
+       "asi_elect":"N",
+       "asi_vig":"S",
+       "asi_cod_inge":"13265",
+       "asi_titulo":"N",
+       "asi_sct":0
+      },
+      {"asi_cod":13262,
+       "asi_nom":"ADMINISTRACIÓN Y GESTIÓN INFORMÁTICA",
+       "asi_teo":4,
+       "asi_ejer":2,
+       "asi_lab":0,
+       "asi_tipo":"P",
+       "asi_creg":1,
+       "asi_elect":"N",
+       "asi_vig":"S",
+       "asi_cod_inge":"13262",
+       "asi_titulo":"N",
+       "asi_sct":0
+      },
+      {"asi_cod":13215,
+       "asi_nom":"TALLER DE BASE DE DATOS",
+       "asi_teo":4,
+       "asi_ejer":2,
+       "asi_lab":0,
+       "asi_tipo":"P",
+       "asi_creg":1,
+       "asi_elect":"N",
+       "asi_vig":"S",
+       "asi_cod_inge":"13215",
+       "asi_titulo":"N",
+       "asi_sct":0
+      },
+      {"asi_cod":13212,
+       "asi_nom":"SISTEMAS OPERATIVOS",
+       "asi_teo":4,
+       "asi_ejer":2,
+       "asi_lab":0,
+       "asi_tipo":"P",
+       "asi_creg":1,
+       "asi_elect":"N",
+       "asi_vig":"S",
+       "asi_cod_inge":"13212",
+       "asi_titulo":"N",
+       "asi_sct":0
+      },
+      {"asi_cod":10133,
+       "asi_nom":"INGLÉS IV",
+       "asi_teo":4,
+       "asi_ejer":2,
+       "asi_lab":0,
+       "asi_tipo":"P",
+       "asi_creg":1,
+       "asi_elect":"N",
+       "asi_vig":"S",
+       "asi_cod_inge":"10133",
+       "asi_titulo":"N",
+       "asi_sct":0
+      }],
+nivel7:[{"asi_cod":13276,
        "asi_nom":"SEMINARIO DE COMPUTACIÓN E INFORMÁTICA",
        "asi_teo":4,
        "asi_ejer":2,
@@ -204,8 +645,7 @@ data () {
        "asi_cod_inge":"13276",
        "asi_titulo":"N",
        "asi_sct":0
-      },
-      {"asi_cod":13270,
+      }, {"asi_cod":13270,
        "asi_nom":"TÓPICOS DE ESPECIALIDAD III",
        "asi_teo":4,
        "asi_ejer":2,
@@ -244,8 +684,37 @@ data () {
        "asi_titulo":"N",
        "asi_sct":0
       },
-      
-    ]
+      {"asi_cod":13267,
+       "asi_nom":"PROYECTO DE INGENIERÍA DE SOFTWARE",
+       "asi_teo":4,
+       "asi_ejer":2,
+       "asi_lab":0,
+       "asi_tipo":"P",
+       "asi_creg":1,
+       "asi_elect":"N",
+       "asi_vig":"S",
+       "asi_cod_inge":"13267",
+       "asi_titulo":"N",
+       "asi_sct":0
+      }],
+nivel8:[ {"asi_cod":13277,
+       "asi_nom":"TRABAJO DE TITULACIÓN",
+       "asi_teo":4,
+       "asi_ejer":2,
+       "asi_lab":0,
+       "asi_tipo":"P",
+       "asi_creg":1,
+       "asi_elect":"N",
+       "asi_vig":"S",
+       "asi_cod_inge":"13277",
+       "asi_titulo":"N",
+       "asi_sct":0
+      }],
+nivel9:[],
+nivel10:[],
+nivel11:[],
+nivel12:[],
+
 }
 } 
 

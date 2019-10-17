@@ -12,10 +12,10 @@
                   SISRA
                 </p>
                 <p class="level-item has-text-centered">
-                  Nombre Alumno:
+                  Nombre Alumno: Claudio Urrutia
                 </p>
                 <p class="level-item has-text-centered">
-                  Carrera: 
+                  Carrera: Ingenieria en Ejecución Informática
                 </p>
                 <p class="level-item has-text-centered">
                   
@@ -40,16 +40,16 @@
   
     <div class="container2">
       
-        <div class="column is-four-fifths" id="malla">
+        <div class="column " id="malla">
           <Malla v-bind="mallaAlumno"></Malla>
 
         </div>
-        <div class="column">
+        <!--<div class="column">
           <Codigo/>
           <br>
           <Info/>
         </div>
-
+        -->
         </div>
       
     
@@ -59,9 +59,7 @@
 </template>
 
 <style>
-.section {
-    
-}
+
 .section {
   display: flex;
   
@@ -74,12 +72,13 @@
   display: flex;
   
   width:100%;
-  height:80%;
+  max-height:100%;
+  min-height:100%;
   background-color: gray;
 }
 #app {
   
-  height: auto;
+  height: 100%;
   max-width: 100%;
   
   
@@ -89,6 +88,8 @@
   html, body {
     margin: 0;
     height: 100%;
+    max-height:100%;
+  min-height:100%;
   }
 
 </style>
