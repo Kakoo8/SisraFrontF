@@ -2,8 +2,8 @@
     
         
         <div class='card'>
+                {{asign}}
         
-        top tooltip
         </div>
     
      
@@ -12,3 +12,16 @@
 <style>
 
 </style>
+
+<script>
+export default{
+
+props:['asignatura'],
+data: function () {
+  return {
+    asign: this.asignatura
+  }
+}        
+}
+
+</script>
