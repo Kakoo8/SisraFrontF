@@ -1,36 +1,50 @@
 <template>
 
   <div id="app" >
+     <b-navbar fixed-top shadow> 
+        <template slot="brand">
+            <b-navbar-item tag="div">
+                  <img src="http://en.usach.cl/sites/default/files/logo-usach_2.png" width="40" height="auto">
+                  SISRA  
 
+            </b-navbar-item>
+        </template>
+        <template slot="start">
+            <b-navbar-item tag="div">
+                
+            </b-navbar-item>
+            <b-navbar-item tag="div">
+              
+                Alumno: {{info.data.datosAlumno.nombreAlu}} {{info.data.datosAlumno.paternoAlu}} {{info.data.datosAlumno.maternoAlu}}
+                
+            </b-navbar-item>
+            
+        </template>
+
+        <template slot="end">
+            <b-navbar-item tag="div">
+                <input class="input is-warning" type="text" v-model="rut" v-on:keyup.enter="cargarDatos()" placeholder="Ingrese Rut">
+
+            </b-navbar-item>
+        </template>
+    </b-navbar>
   
     
     <div class="container">
-      <h2 class="subtitle">
-      <nav class="level">
-                <p class="level-item">
-                  <img src="http://en.usach.cl/sites/default/files/logo-usach_2.png" width="40" height="auto">
-                  SISRA
-                </p>
-                <p class="level-item has-text-centered">
-                  Nombre Alumno: <p v-show="valido">Claudio Urrutia<p>
-                </p>
-                <p class="level-item has-text-centered">
-                  Carrera: <p v-show="valido">Ingenieria en Ejecución Informática<p>
-                </p>
-                <p class="level-item has-text-centered">
-                  
-                </p>
-                <p class="level-item has-text-centered">
-                  
-                </p>
-                <p class="level-item has-text-centered">
-                <input class="input is-warning" type="text" v-on:keyup.enter="actualizar" placeholder="Ingrese Rut">
-                  
-                </p>
-              </nav>
+      <div class="subtitle">
+      <div class="level">
+                <div class="level-item">
+                {{info.data.datosAlumno.tipoCarrera}} {{info.data.datosAlumno.especialidadCarrera}}
+                </div>
+                <div class="level-item">
+                 Información
+                </div>
+                
+                
+              </div>
         
       
-      </h2>
+      </div>
 
     </div>
  
@@ -40,22 +54,26 @@
   
     <div class="container is-fluid" id="container2">
       
-        <div class="column " id="malla" v-show="valido">
-          <Malla ></Malla>
+          <Malla :info="info.data.malla" ></Malla>
+          
 
-        </div>
+    </div>
         <!--<div class="column">
+        <div class="column " id="malla" >
           <Codigo/>
           <br>
           <Info/>
         </div> is-four-fifths-->
-        
+
+
+
+   
     </div>
       
     
   
 
-     </div>
+     
 </template>
 
 <style>
@@ -68,6 +86,20 @@
   
 }
 
+.navbar.is-fixed-top {
+    left: 0px;
+    position: fixed;
+    right: 0px;
+    z-index: 30;
+    top: 0px;
+    background-color:#005190;
+    color: #ffffff !important;
+}
+.container{
+  font-size: 14px;
+  font-size-adjust: inherit;
+}
+
 #container2{
   display: flex;
   width: -webkit-fill-available;
@@ -75,13 +107,14 @@
   min-height: 100%;
   max-height: 100%;
   background-color: transparent;
+  
 }
   #app {
     font-family: 'Avenir', Helvetica, Arial, sans-serif;
     -webkit-font-smoothing: antialiased;
     -moz-osx-font-smoothing: grayscale;
     text-align: center;
-    background-color: #ecf1c1; 
+    background-color: #ffffffe5; 
     height: 100%;
 
     background-position: center;
@@ -110,6 +143,7 @@
 import Codigo from './components/CodigoColor';
 import Info from './components/Info';
 import Malla from './components/Malla';
+import axios from 'axios';
 export default {
   name: 'App',
   components: {
@@ -122,16 +156,25 @@ export default {
   props:['mallaAlumno'],
   data () {
     return{
-      valido:true
+      valido:true,
+      info:{data:{
+            datosAlumno:{},
+
+      }},
+      rut:null
     }
   },
-  methods: {
-        actualizar: function() {
-          setTimeout(()=>{this.valido = true;},3000)
-          
-        }
-      },
-  
+  methods:{
+          cargarDatos() {
+          axios
+          .get('http://localhost:3001/asignaturas_importantes/buscarAlumnoPorRut/'+ this.rut)
+          .then(response => (this.info = response))
+          }
+
+  },
+  mounted () {
+
+  }
 };
 
 </script>
