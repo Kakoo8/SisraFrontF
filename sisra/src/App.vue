@@ -92,8 +92,22 @@
     right: 0px;
     z-index: 30;
     top: 0px;
-    background-color:#005190;
+      
+    background: rgba(0,58,102,1);
+    background: -moz-linear-gradient(top, rgba(0,58,102,1) 0%, rgba(0,58,102,1) 42%, rgba(22,141,177,1) 72%, rgba(4,42,58,1) 98%, rgba(4,42,58,1) 100%);
+    
+    background: -webkit-linear-gradient(top, rgba(0,58,102,1) 0%, rgba(0,58,102,1) 42%, rgba(22,141,177,1) 72%, rgba(4,42,58,1) 98%, rgba(4,42,58,1) 100%);
+    background: -o-linear-gradient(top, rgba(0,58,102,1) 0%, rgba(0,58,102,1) 42%, rgba(22,141,177,1) 72%, rgba(4,42,58,1) 98%, rgba(4,42,58,1) 100%);
+    background: -ms-linear-gradient(top, rgba(0,58,102,1) 0%, rgba(0,58,102,1) 42%, rgba(22,141,177,1) 72%, rgba(4,42,58,1) 98%, rgba(4,42,58,1) 100%);
+    background: linear-gradient(to bottom, rgba(0,58,102,1) 0%, rgba(0,58,102,1) 42%, rgba(22,141,177,1) 72%, rgba(4,42,58,1) 98%, rgba(4,42,58,1) 100%);
+    filter: progid:DXImageTransform.Microsoft.gradient( startColorstr='#003a66', endColorstr='#042a3a', GradientType=0 );
+
     color: #ffffff !important;
+    font-style: italic;
+
+    
+    border-image-slice: 1;
+
 }
 .container{
   font-size: 14px;

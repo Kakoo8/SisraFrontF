@@ -61,7 +61,9 @@
   background-color:green;
   color:white;
   text-align: center;
-  
+  -webkit-box-shadow: 10px 10px 17px -1px rgba(0,0,0,0.75);
+-moz-box-shadow: 10px 10px 17px -1px rgba(0,0,0,0.75);
+box-shadow: 10px 10px 17px -1px rgba(0,0,0,0.75);
   font-size:10px;
   padding: 10px;
   
@@ -76,7 +78,9 @@
 
   color:black;
   text-align: center;
-  
+-webkit-box-shadow: 10px 10px 17px -1px rgba(0,0,0,0.75);
+-moz-box-shadow: 10px 10px 17px -1px rgba(0,0,0,0.75);
+box-shadow: 10px 10px 17px -1px rgba(0,0,0,0.75);
   font-size:10px;
   padding: 10px;
 }
@@ -87,9 +91,7 @@
   
   background-color:transparent;
 }
-.card{
-  box-shadow: 5px;
-}
+
 </style>
 
 <script>
