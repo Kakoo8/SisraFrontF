@@ -1,7 +1,7 @@
 <template>
 
   <div id="app" >
-     <b-navbar fixed-top shadow> 
+     <b-navbar fixed-top color=white> 
         <template slot="brand">
             <b-navbar-item tag="div">
                   <img src="http://en.usach.cl/sites/default/files/logo-usach_2.png" width="40" height="auto">
@@ -102,12 +102,22 @@
     background: linear-gradient(to bottom, rgba(0,58,102,1) 0%, rgba(0,58,102,1) 42%, rgba(22,141,177,1) 72%, rgba(4,42,58,1) 98%, rgba(4,42,58,1) 100%);
     filter: progid:DXImageTransform.Microsoft.gradient( startColorstr='#003a66', endColorstr='#042a3a', GradientType=0 );
 
-    color: #ffffff !important;
-    font-style: italic;
+   
+    
 
     
-    border-image-slice: 1;
+   
 
+}
+.navbar-item {
+    display: -webkit-box;
+    display: -ms-flexbox;
+    display: flex;
+    color: 
+    white !important;
+}
+.navbar-item{
+  color: #ffffff;
 }
 .container{
   font-size: 14px;
@@ -132,7 +142,7 @@
     height: 100%;
 
     background-position: center;
- 
+    color: #ffffff;
 }
   html, body, #app {
     margin: 0;
