@@ -13,14 +13,24 @@
                     
                       {{asignatura.nombreAsig}}
                       <br>
-                      {{asignatura.peso}}
-                    
+                      
+                      <div id = "estrellas" v-if="asignatura.peso>-1">
+                        <div v-for="n in asignatura.peso" >
+                      <img id="estrella" src="../assets/estrella.png" width="20px" height="20px">
+                        </div>
+                      </div>  
                   </div>
                   <div  class="card" v-else id="asignatura2">
                     
                       {{asignatura.nombreAsig}}
                       <br>
-                      {{asignatura.peso}}
+                      
+                      
+                      <div id = "estrellas" v-if="asignatura.peso>-1">
+                        <div v-for="n in asignatura.peso" >
+                      <img id="estrella" src="../assets/estrella.png" width="20px" height="20px">
+                        </div>
+                      </div>  
                     
                   </div>        
                   <br>
@@ -49,8 +59,18 @@
 
 #nivel{
   background-color:transparent;
+  color: black;
   
   
+}
+#estrella{
+  float: left;
+  
+}
+#estrellas{
+  display: flex;
+  justify-content: center;
+  padding-left: 0px;
 }
 #asignatura{
 
@@ -61,11 +81,13 @@
   background-color:green;
   color:white;
   text-align: center;
+  align-content: center;
   -webkit-box-shadow: 10px 10px 17px -1px rgba(0,0,0,0.75);
--moz-box-shadow: 10px 10px 17px -1px rgba(0,0,0,0.75);
-box-shadow: 10px 10px 17px -1px rgba(0,0,0,0.75);
+  -moz-box-shadow: 10px 10px 17px -1px rgba(0,0,0,0.75);
+  box-shadow: 10px 10px 17px -1px rgba(0,0,0,0.75);
   font-size:10px;
   padding: 10px;
+  
   
 }
 
