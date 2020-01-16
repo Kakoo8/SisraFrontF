@@ -18,6 +18,9 @@
                 Alumno: {{info.data.datosAlumno.nombreAlu}} {{info.data.datosAlumno.paternoAlu}} {{info.data.datosAlumno.maternoAlu}}
                 
             </b-navbar-item>
+            <div id="navbarBurger" class="navbar-burger burger" data-target="navMenuMore">
+
+            </div>
 
             
         </template>
@@ -70,6 +73,8 @@
 
    
     </div>
+
+    
       
     
   
@@ -232,12 +237,12 @@ export default {
           axios
           .get('http://localhost:3001/asignaturas_importantes/buscarAlumnoPorRut/'+ this.rut)
 
-          .then(response => {(this.info = response ,this.cargado=true)})
-          .catch(error => {
-                   console(error.response);
-
-          
-          })
+          .then(
+            
+            
+            response => {(this.info = response ,this.cargado=true)},
+            error=> alert("El rut que ingresado no es válido o no existe, intente nuevamente")
+          )  
           },
           alertCustom() {
                 this.$buefy.dialog.alert({
