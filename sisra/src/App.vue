@@ -242,7 +242,8 @@ export default {
           alertCustom() {
                 this.$buefy.dialog.alert({
                     title: 'INFORMACIONES',
-                    message: '¿Que son PPA, NAS y NAR? \n PPA:es esto \n NAS:es esto \n NAR: es esto. ',
+                    message: '¿Que son PPA, NAS y NAR? <br> <b>PPA (Promedio Ponderado Acumulado): </b> Indicador de rendimiento académico que incorpora todas las notas obtenidas por el estudiante hasta un determinado periodo académico, ponderadas por la respectiva cantidad de créditos de la asignatura.<br><b>NAS (Indicador ritmo de avance):</b> Corresponde al número de asignaturas aprobadas versus el número de semestres de permanencia. <br> <b>NAR (Indicador de efectividad):</b> Se calcula como el número de asignaturas aprobadas dividido por el total de asignaturas reprobadas.',
+                    html: true,
                     confirmText: 'Listo'
                     
                 })
