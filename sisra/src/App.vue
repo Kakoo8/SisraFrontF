@@ -24,7 +24,7 @@
 
         <template slot="end">
             <b-navbar-item tag="div">
-                <input class="input is-warning" type="text" v-model="rut" v-on:keyup.enter="cargarDatos()" placeholder="Ingrese Rut">
+                <input class="input is-warning" type="number" v-model="rut" v-on:keyup.enter="cargarDatos()" placeholder="Ingrese Rut">
                  <b-button type="is-warning" v-on:click="cargarDatos()">Buscar</b-button>
                  <b-button id="informacion" rounded @click="alertCustom" ><img src="./assets/question.png" width="auto" height="auto"></b-button>
             </b-navbar-item>
@@ -136,12 +136,27 @@
   min-height: 100%;
   max-height: 100%;
   background-color: transparent;
+
   
 }
 #informacion{
   background-color: transparent;
   color:white;
   border-color: transparent;
+}
+
+
+
+/* Chrome, Safari, Edge, Opera */
+input::-webkit-outer-spin-button,
+input::-webkit-inner-spin-button {
+  -webkit-appearance: none;
+  margin: 0;
+}
+
+/* Firefox */
+input[type=number] {
+  -moz-appearance:textfield;
 }
   #app {
     font-family: 'Avenir', Helvetica, Arial, sans-serif;
@@ -164,14 +179,19 @@
     max-width: 100%;
     display:flex;
     flex-flow:column;
+    
   }
  #malla{
-   overflow:auto;
+   
   color:black;
+  
    
  } 
  #botones{
    border-bottom-style: groove;
+ }
+ body{
+   overflow-x: scroll !important;
  }
 
 
@@ -211,14 +231,13 @@ export default {
             
           axios
           .get('http://localhost:3001/asignaturas_importantes/buscarAlumnoPorRut/'+ this.rut)
+
+          .then(response => {(this.info = response ,this.cargado=true)})
           .catch(error => {
+                   console(error.response);
+
           
-          
-          this.cargado= false
           })
-          .then(response => (this.info = response),this.cargado=true)
-          .finally(() => this.loading = false)
-          
           },
           alertCustom() {
                 this.$buefy.dialog.alert({
@@ -227,7 +246,7 @@ export default {
                     confirmText: 'Listo'
                     
                 })
-            },
+            }
 
   },
   mounted () {
